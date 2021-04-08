@@ -27,12 +27,11 @@ const addUser = ({ id, username, room }) => {
 
 const removeUser = (id) => {
     const index = users.findIndex((user) => user.id===id )
-    // const User = users.find((user) => user.id===id)
+
     if(index!==-1){
         const removedUser = users.splice(index, 1)
         return removedUser[0]
-        // console.log(User)
-        // return { User }
+        
     }
 
 
@@ -63,13 +62,6 @@ const getUsersInRoom = (room) => {
     return UsersInRoom
 }
 
-// const a = addUser({
-//     id:1,
-//     username:'rits',
-//     room:'chatroom'
-// })
-// const b = removeUser(1)
-// console.log(b)
 module.exports = {
     addUser,
     removeUser,

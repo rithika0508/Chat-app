@@ -17,7 +17,6 @@ app.use(express.static(path.join(__dirname,'../public')))
 
 const server = http.createServer(app)
 const io = socketio(server)
-// let count = 0
 
 io.on('connection', (socket) => {
     console.log('new web socket connnection')
@@ -36,8 +35,6 @@ io.on('connection', (socket) => {
             room: user.room,
             user: getUsersInRoom(user.room)
         })
-        //socket.emit, io.emit, socket.broadcast.emit
-        //io.to.emit, socket.broadcast.to.emit
         
     })
 
@@ -75,21 +72,6 @@ io.on('connection', (socket) => {
         }
         
     })
-    
-    
-
-
-
-
-
-    // socket.on('increment', () => {
-    //     count++;
-    //     // socket.emit('countUpdated', count)
-    //     io.emit('countUpdated', count)
-    // })
-    
-    
-    
 })
 server.listen(port, () => {
     console.log('server on port 3000');

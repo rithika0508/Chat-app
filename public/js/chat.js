@@ -22,16 +22,14 @@ const autoScroll = () => {
     
     //visible height
     const visibleHeight = messages.offsetHeight
-    console.log(visibleHeight)
 
     //height of messages container
     const containerHeight = messages.scrollHeight
-    console.log(containerHeight)
+ 
 
     //how much scrolled
     const scrolled = messages.scrollTop + visibleHeight
-    console.log(messages.scrollTop)
-    console.log(scrolled)
+
     
     messages.scrollTop = scrolled
 
